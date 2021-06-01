@@ -1,0 +1,10 @@
+const num = Number(window.prompt('Digite um número: '))
+const heading = document.getElementById('numero-heading')
+const respostas = document.getElementById('repostas')
+        heading.innerHTML = `${num}<br />`
+        respostas.innerHTML += `<p>A raiz quadrada: ${num ** (1/2)} <br /></p>`
+        respostas.innerHTML += `<p>${num} é inteiro? ${Number.isInteger(num)} <br /></p>`
+        respostas.innerHTML += `<p>É NaN? ${Number.isNaN(num)} <br /></p>`
+        respostas.innerHTML += `<p>Arredondando para baixo: ${Math.floor(num)} <br /></p>`
+        respostas.innerHTML += `<p>Arredondando para cima: ${Math.ceil(num)} <br /></p>`
+        respostas.innerHTML += `<p>Com duas casas decimais: ${num.toFixed(2)}</p>`
