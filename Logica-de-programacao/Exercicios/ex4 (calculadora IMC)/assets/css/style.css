@@ -83,3 +83,12 @@ ul li {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+/*Estilizando a div do resultado*/
+
+#resultado {
+    text-align: center;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 10px;
+}
