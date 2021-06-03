@@ -66,6 +66,9 @@ function getMonthTxt() {
 function zeroEnd (num) {
         const numZero = num >= 10 ? num : `0${num}`
         return numZero
-    }
+}
+function getFullTime (){
+    return `${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`
+}
 setH1(`${getDayWeek()}, ${zeroEnd(data.getDate())} de ${getMonthTxt()} de ${zeroEnd(data.getFullYear())}
-<p>alou</p>`)
+</br>${getFullTime()}`)
