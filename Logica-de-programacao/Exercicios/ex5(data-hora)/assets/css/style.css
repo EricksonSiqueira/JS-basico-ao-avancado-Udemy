@@ -61,3 +61,7 @@ form button:hover {
 form button:active {
     background-color: royalblue;
 }
+
+.data-hora {
+    line-height: 40px;
+}
