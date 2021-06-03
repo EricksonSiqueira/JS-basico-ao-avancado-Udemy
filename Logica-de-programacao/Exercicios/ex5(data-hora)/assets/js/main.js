@@ -60,6 +60,12 @@ function getMonthTxt() {
         default:
             return -1
     }
+    
 
 }
-setH1(`${getDayWeek()}, ${getMonthTxt()}`)
+function zeroEnd (num) {
+        const numZero = num >= 10 ? num : `0${num}`
+        return numZero
+    }
+setH1(`${getDayWeek()}, ${zeroEnd(data.getDate())} de ${getMonthTxt()} de ${zeroEnd(data.getFullYear())}
+<p>alou</p>`)
