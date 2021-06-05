@@ -1,7 +1,6 @@
 let a = 'A'
 let b = 'B'
-let c = 'C'
 
-[a, b, c] = [1, 2, 3];
+[a, b] = [1, 2]
 
-console.log(a, b, c)
+console.log(a, b)
