@@ -10,9 +10,9 @@ let letras = [
     ['g', 'h', 'i']
 ]
 
-let [, , , quatro] = numeros
-let [ , [, , f]] = letras
+let [, dois2, , quatro] = numeros
+let [ , [ ,d, f], [, , i]] = letras
 console.log(letras[1][2])
-console.log(quatro)
-console.log(f)
+console.log(quatro, dois2)
+console.log(f, d, i)
 
