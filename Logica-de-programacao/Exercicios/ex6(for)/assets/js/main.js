@@ -11,3 +11,6 @@ function creatElement (elemento){ // pega um elemento com tag e texto e joga no 
     container.innerHTML += `<${elemento.tag}> ${elemento.texto} </${elemento.tag}>`
 }
 
+for (let i = 0; i < elements.length; i++){ // pega todos os elementos do vetor elements
+    creatElement(elements[i])
+}
