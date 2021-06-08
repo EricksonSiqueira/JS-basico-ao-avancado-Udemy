@@ -5,3 +5,9 @@ const elements = [ //vetor com os objetos que quero que sejam adicionados
     {tag: 'section', texto: 'Frase4'}
 ]
 
+function creatElement (elemento){ // pega um elemento com tag e texto e joga no html
+    const container = document.querySelector('.container')
+
+    container.innerHTML += `<${elemento.tag}> ${elemento.texto} </${elemento.tag}>`
+}
+
