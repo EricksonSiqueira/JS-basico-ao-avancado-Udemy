@@ -7,8 +7,9 @@ function maior(n1, n2){
 }
 
 function maior2 (x, y){
-    let maior = x > y ? x : y
-    return maior
+    return x > y ? x : y
 }
 
-console.log(maior2(555, 650))
+const maior3 = (x, y) => x > y ? x : y
+
+console.log(maior3(10, 20))
