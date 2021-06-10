@@ -2,12 +2,11 @@ const relogio = document.querySelector('.relogio')
 const iniciar = document.querySelector('.iniciar')
 const pausar = document.querySelector('.pausar')
 const reiniciar = document.querySelector('.reiniciar')
+let data = new Date('01-01-1970 00:00:00')
+//const dataZero = () => {return data = new Date('01-01-1970 00:00:00')}
 
-
-function timer (){
-    const data = new Date('01-01-1970 00:00:00')
-
-    relogio.innerHTML = data.toLocaleTimeString('pt-BR', {
+function mostraHora (data = new Date()){
+    return data.toLocaleTimeString({
         hour12: false,
         hour: '2-digit',
         minute: '2-digit',
@@ -15,14 +14,36 @@ function timer (){
     })
 }
 
+function setRelogio(data){relogio.innerHTML = mostraHora(data)}
+
+function timer (bool) {
+    let cont = 60000 * 60 * 3
+    let timer
+
+    if (bool === true) {
+        timer = setInterval(function (){
+            relogio.style.color = 'black'
+            cont += 1000
+            data.setTime(cont)
+            relogio.innerHTML = mostraHora(data)
+        }, 1000)
+    } else if (bool === false){
+        relogio.style.color = 'red'
+        setTimeout(function (){
+            clearInterval(timer)
+        },0)
+    }
+    
+}
+
 iniciar.addEventListener('click', function (event){
-    timer()
+    timer(true)
 })
 pausar.addEventListener('click', function (event){
-    window.alert('Cliquei no botão pausar')
+    timer(false)
 })
 
 reiniciar.addEventListener('click', function (event){
-    window.alert('Cliquei no botão reiniciar')
+
 })
 

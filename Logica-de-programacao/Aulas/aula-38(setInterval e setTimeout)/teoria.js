@@ -11,14 +11,15 @@ function mostraHora() {
 
 
 
-const timer = setInterval(function () { // repete a função no intervalo passado, corre infinitamente
-    console.log(mostraHora())
-}, 1000)
+const  timer = setInterval(function () { // repete a função no intervalo passado, corre infinitamente
+        console.log(mostraHora())
+    }, 1000)
 
-setTimeout(function(){ // setTimeOut executa a função pelo tempo passado por parâmetro
+
+setTimeout(function () { // setTimeOut executa a função pelo tempo passado por parâmetro
     clearInterval(timer)
-},3000)
+}, 0)
 
-setTimeout(function() {
+setTimeout(function () {
     console.log('Olá mundo')
-},5000)
+}, 5000)
