@@ -4,6 +4,7 @@ const pausar = document.querySelector('.pausar')
 const reiniciar = document.querySelector('.reiniciar')
 let data = new Date('01-01-1970 00:00:00')
 let t;
+let cont = 60000 * 60 * 3
 //const dataZero = () => {return data = new Date('01-01-1970 00:00:00')}
 
 function mostraHora() {
@@ -18,8 +19,6 @@ function mostraHora() {
 function setRelogio(data) { relogio.innerHTML = mostraHora(data) }
 
 function timer() {
-    let cont = 60000 * 60 * 3
-
     t = setInterval(function () {
         cont += 1000
         data.setTime(cont)
@@ -32,7 +31,7 @@ function stopTimer() {
 
 iniciar.addEventListener('click', function (event) {
     timer()
-    relogio.style.color = 'black'
+    relogio.style.color = 'green'
 })
 pausar.addEventListener('click', function (event) {
     stopTimer()
