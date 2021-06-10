@@ -22,7 +22,7 @@ body {
     width: 400px;
     height: 400px;
     margin: 10% auto;
-    background-color: #fff;
+    background-color: rgb(253, 249, 227);
     padding: 20px;
     border-radius: 50%;
     display: flex;
@@ -30,6 +30,7 @@ body {
     flex-direction: column;
     border: 20px solid gold;
     z-index: 4;
+    padding-top: 55px;
 }
 
 form input, form label, form button {
@@ -48,23 +49,24 @@ form input:focus {
     outline: 1px solid var(--primary-color)
 }
 
-form button {
+.botoes button {
     border: none;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    height: 50px;
+    background-color: gold;
+    border-radius: 10%;
+    font-size: 20px;
+    border: 1px solid black;
     cursor: pointer;
-    margin-top: 30px;
 }
 
-form button:hover {
-    background-color: var(--primary-color-dark);
+.botoes button:hover {
+    background-color: rgb(240, 205, 6)
 }
 
-form button:active {
-    background-color: royalblue;
+.botoes .iniciar:active {
+    background-color: rgba(9, 119, 9, 0.774);
+}
+.botoes .pausar:active {
+    background-color: rgb(231, 39, 5);
 }
 
 .relogio {
@@ -79,7 +81,7 @@ form button:active {
 }
 /*efeito de opacidade no background*/
 .blur {
-    background-color: rgba(0, 0, 0, 0.384);
+    background-color: rgba(0, 0, 0, 0.425);
     position: absolute;
     height: 100vh;
     width: 100vw;
