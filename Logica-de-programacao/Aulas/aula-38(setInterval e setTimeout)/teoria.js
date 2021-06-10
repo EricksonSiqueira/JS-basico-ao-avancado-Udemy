@@ -18,7 +18,7 @@ const  timer = setInterval(function () { // repete a função no intervalo passa
 
 setTimeout(function () { // setTimeOut executa a função pelo tempo passado por parâmetro
     clearInterval(timer)
-}, 0)
+}, 2000)
 
 setTimeout(function () {
     console.log('Olá mundo')
