@@ -79,8 +79,26 @@ form button:active {
     display: flex;
 }
 .blur {
-    background-color: rgba(0, 0, 0, 0.281);
+    background-color: rgba(0, 0, 0, 0.384);
     position: absolute;
     height: 100vh;
     width: 100vw;
+} 
+.bolinha {
+    border-radius: 50%;
+    height: 50px;
+    width: 100px;
+    background-color: rgba(2, 2, 0, 0);
+    border: 15px solid gold;
+    position: absolute;
+    margin-left: 46.5%;
+    margin-top: 5%;
+}
+.traco {
+    height: 40px;
+    width: 30px;
+    background-color: gold;
+    position: absolute;
+    margin-left: 48.9%;
+    margin-top: 8%;
 }
