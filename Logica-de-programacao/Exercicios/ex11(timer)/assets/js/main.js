@@ -16,7 +16,6 @@ function mostraHora() {
     })
 }
 
-
 function timer() {
     t = setInterval(function () {
         cont += 1000
@@ -38,6 +37,11 @@ pausar.addEventListener('click', function (event) {
 })
 
 reiniciar.addEventListener('click', function (event) {
+    relogio.style.color = 'black'
+    stopTimer()
+    data = new Date('01-01-1970 00:00:00')
+    relogio.innerHTML = mostraHora()
+    cont = 60000 * 60 * 3
 
 })
 
