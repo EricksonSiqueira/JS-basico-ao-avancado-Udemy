@@ -70,20 +70,22 @@ form button:active {
 .relogio {
     font-size: 3em;
 }
-.heading { 
-    text-align: center;
-}
+
+/*background*/
 .pg { 
     background-image: url(../img/madeira.jpg);
     min-height: 100vh;
     display: flex;
 }
+/*efeito de opacidade no background*/
 .blur {
     background-color: rgba(0, 0, 0, 0.384);
     position: absolute;
     height: 100vh;
     width: 100vw;
 } 
+
+/*Detalhes da parte de cima*/
 .bolinha {
     border-radius: 50%;
     height: 50px;
