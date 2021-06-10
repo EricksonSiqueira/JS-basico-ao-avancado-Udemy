@@ -16,7 +16,6 @@ function mostraHora() {
     })
 }
 
-function setRelogio(data) { relogio.innerHTML = mostraHora(data) }
 
 function timer() {
     t = setInterval(function () {
