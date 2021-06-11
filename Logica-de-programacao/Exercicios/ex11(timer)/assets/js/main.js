@@ -4,7 +4,7 @@ const pausar = document.querySelector('.pausar')
 const reiniciar = document.querySelector('.reiniciar')
 let data = new Date('01-01-1970 00:00:00')
 let t;
-let cont = 60000 * 60 * 3 // contador pra hora ficar em 00:00:00 certinho
+let segundos = 60000 * 60 * 3 // contador pra hora ficar em 00:00:00 certinho
 
 function mostraHora() { // retorna a hora atual do objeto data
     return data.toLocaleTimeString({
@@ -17,8 +17,8 @@ function mostraHora() { // retorna a hora atual do objeto data
 
 function timer() { //faz o timer adicionar 1 segundo ao html do relogio a cada 1 segundo
     t = setInterval(function () {
-        cont += 1000
-        data.setTime(cont)
+        segundos += 1000
+        data.setTime(segundos)
         relogio.innerHTML = mostraHora()
     }, 1000)
 }
@@ -40,6 +40,6 @@ reiniciar.addEventListener('click', function (event) { //botão de resetar
     stopTimer()
     data = new Date('01-01-1970 00:00:00')
     relogio.innerHTML = mostraHora()
-    cont = 60000 * 60 * 3
+    segundos = 60000 * 60 * 3
 })
 
