@@ -23,24 +23,28 @@ function timer() { //faz o timer adicionar 1 segundo ao html do relogio a cada 1
     }, 1000)
 }
 function stopTimer() { // função usada para parar o timer
-    clearInterval(t) 
+    clearInterval(t)
 }
 
-iniciar.addEventListener('click', function (event) { // botão de iniciar
-    stopTimer()
-    timer()
-    relogio.style.color = 'green'
-})
-pausar.addEventListener('click', function (event) { //botão de pausar
-    stopTimer()
-    relogio.style.color = 'red'
+document.addEventListener('click', function (e) {
+    const el = e.target
+
+    if (el.classList.contains('iniciar')) {
+        stopTimer()
+        timer()
+        relogio.style.color = 'green'
+    }
+    if (el.classList.contains('pausar')) {
+        stopTimer()
+        relogio.style.color = 'red'
+    }
+    if (el.classList.contains('reiniciar')) {
+        relogio.style.color = 'black'
+        stopTimer()
+        data = new Date('01-01-1970 00:00:00')
+        relogio.innerHTML = mostraHora()
+        segundos = 60000 * 60 * 3
+    }
 })
 
-reiniciar.addEventListener('click', function (event) { //botão de resetar
-    relogio.style.color = 'black'
-    stopTimer()
-    data = new Date('01-01-1970 00:00:00')
-    relogio.innerHTML = mostraHora()
-    segundos = 60000 * 60 * 3
-})
 
