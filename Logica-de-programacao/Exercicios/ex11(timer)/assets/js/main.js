@@ -27,6 +27,7 @@ function stopTimer() { // função usada para parar o timer
 }
 
 iniciar.addEventListener('click', function (event) { // botão de iniciar
+    stopTimer()
     timer()
     relogio.style.color = 'green'
 })
