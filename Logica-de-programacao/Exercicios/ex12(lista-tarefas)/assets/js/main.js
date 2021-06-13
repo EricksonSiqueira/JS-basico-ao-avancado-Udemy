@@ -1,7 +1,5 @@
 const txtAdcionar = document.querySelector('.add-tarefa-txt')
 const lista = document.querySelector('.tarefas')
-let tarefas = []
-let botoes = []
 let contTarefas = 0
 
 // eventListener global
@@ -18,20 +16,20 @@ document.addEventListener('click', function (e){
 })
 
 function adicionaTarefa () {
+    const tarefa = document.createElement('li')
+    const botao = document.createElement('button')
     // criando o elemento do txt
-    tarefas.push(document.createElement('li'))
-    tarefas[contTarefas].innerHTML = `${txtAdcionar.value}`
-    tarefas[contTarefas].classList.add(`txt`)
-    tarefas[contTarefas].classList.add(`t${contTarefas}`)
+    tarefa.innerHTML = `${txtAdcionar.value}`
+    tarefa.classList.add(`txt`)
+    tarefa.classList.add(`t${contTarefas}`)
     // criando o botão de apagar ao lado do txt
-    botoes.push(document.createElement('button'))
-    botoes[contTarefas].innerHTML = 'Apagar'
-    botoes[contTarefas].classList.add(`apagar`)
-    botoes[contTarefas].classList.add(`b${contTarefas}`)
+    botao.innerHTML = 'Apagar'
+    botao.classList.add(`apagar`)
+    botao.classList.add(`b${contTarefas}`)
     // adicionando a lista
-    lista.appendChild(tarefas[contTarefas])
-    tarefas[contTarefas].appendChild(botoes[contTarefas])
-    contTarefas += 1
+    lista.appendChild(tarefa)
+    tarefa.appendChild(botao)
+    contTarefas++
 }
 
 function apagar (botao){
