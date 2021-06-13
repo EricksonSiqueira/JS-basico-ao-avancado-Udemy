@@ -30,6 +30,7 @@ function adicionaTarefa () {
     lista.appendChild(tarefa)
     tarefa.appendChild(botao)
     contTarefas++
+    txtAdcionar.value = ''
 }
 
 function apagar (botao){
