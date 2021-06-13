@@ -1,8 +1,5 @@
 function relogio() {
     const relogio = document.querySelector('.relogio')
-    const iniciar = document.querySelector('.iniciar')
-    const pausar = document.querySelector('.pausar')
-    const reiniciar = document.querySelector('.reiniciar')
     let data = new Date('01-01-1970 00:00:00')
     let t;
     let segundos = 60000 * 60 * 3 // contador pra hora ficar em 00:00:00 certinho
