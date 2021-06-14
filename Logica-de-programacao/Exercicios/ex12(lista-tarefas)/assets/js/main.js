@@ -38,6 +38,7 @@ function adicionaTarefa(textoInput) {
     botao.innerHTML = 'Apagar'
     botao.classList.add(`apagar`)
     botao.classList.add(`b${contTarefas}`)
+    botao.setAttribute('title', 'Apagar tarefa')
     // adicionando a lista
     lista.appendChild(tarefa)
     tarefa.appendChild(botao)
