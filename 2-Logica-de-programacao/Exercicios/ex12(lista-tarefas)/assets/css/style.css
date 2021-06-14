@@ -20,49 +20,26 @@ body {
 }
 
 .container {
-    max-width: 640px;
+    min-width: 500px;
+    min-height: 700px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: rgb(250, 245, 223);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 2px;
+    border: 20px solid #A94401;
 }
 
-form input, form label, form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-form input {
-    font-size: 24px;
-    height: 50px;
-    padding: 0 20px;
-}
-
-form input:focus {
-    outline: 1px solid var(--primary-color)
-}
-
-form button {
-    border: none;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    height: 50px;
-    cursor: pointer;
-    margin-top: 30px;
-}
-
-form button:hover {
-    background-color: var(--primary-color-dark);
-}
-
-form button:active {
-    background-color: royalblue;
-}
 .adicionar {
     margin-left: 5px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: rgb(228, 135, 28);
+    font-weight: 700;
+}
+
+.adicionar:hover {
+    background-color: rgb(238, 201, 36);
 }
 
 .apagar {
@@ -70,29 +47,40 @@ form button:active {
     color: red;
     font-weight:900;
     border: none;
-    background-color: white;
+    background-color: rgb(250, 245, 223);
 }
 .h1 {
     text-align: center;
+    text-shadow: 1px 1px 1px black;
 }
 .add-tarefa-txt {
-    width: 80%;
+    width: 70%;
+    border: none;
+    height: 30px;
+    border: 1px solid black;
+}
+.add-tarefa-txt::placeholder {
+    color: rgba(0, 0, 0, 0.308);
+}
+.add-tarefa-txt:focus {
+    box-shadow: 1px 1px 6px rgba(240, 168, 13, 0.61);
 }
 .tarefas {
     list-style: none;
     margin-top: 30px;
     text-align: center;
 }
+.tarefas li {
+    font-weight: 550;
+}
 .background {
-    margin-top: -4%;
     background-image: url('../img/madeira.jpg');
-    min-height: 101vh;
-    min-width: 100vw;
 }
 .blur {
-    height: 101vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.404);
 }
-.container{
-    z-index: 2;
-}
+
