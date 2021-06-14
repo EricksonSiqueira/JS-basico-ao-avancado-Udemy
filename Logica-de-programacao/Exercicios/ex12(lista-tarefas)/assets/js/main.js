@@ -35,7 +35,7 @@ function adicionaTarefa(textoInput) {
     tarefa.classList.add(`txt`)
     tarefa.classList.add(`t${contTarefas}`)
     // criando o botão de apagar ao lado do txt
-    botao.innerHTML = 'Apagar'
+    botao.innerHTML = 'X'
     botao.classList.add(`apagar`)
     botao.classList.add(`b${contTarefas}`)
     botao.setAttribute('title', 'Apagar tarefa')

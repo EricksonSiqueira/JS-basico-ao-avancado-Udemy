@@ -67,7 +67,19 @@ form button:active {
 
 .apagar {
     margin-left: 10px;
+    color: red;
+    font-weight:900;
+    border: none;
+    background-color: white;
 }
 .h1 {
+    text-align: center;
+}
+.add-tarefa-txt {
+    width: 80%;
+}
+.tarefas {
+    list-style: none;
+    margin-top: 30px;
     text-align: center;
 }
