@@ -3,19 +3,31 @@ const lista = document.querySelector('.tarefas')
 let contTarefas = 0
 
 // eventListener global
-document.addEventListener('click', function (e){
+document.addEventListener('click', function (e) {
     const el = e.target
     //botao adicionar
-    if (el.classList.contains('adicionar')){
-        adicionaTarefa()
+    if (el.classList.contains('adicionar')) {
+        if (txtAdcionar.value === '') {
+            window.alert('Digite algo para adicionar a tarefa')
+            return;
+        } adicionaTarefa()
     }
     //botao apagar
-    if (el.classList.contains('apagar')){
+    if (el.classList.contains('apagar')) {
         apagar(el.classList.item(1))
     }
 })
 
-function adicionaTarefa () {
+txtAdcionar.addEventListener('keypress', function (e) {
+    if(e.keyCode === 13){
+        if (txtAdcionar.value === '') {
+            window.alert('Digite algo para adicionar a tarefa')
+            return;
+        } adicionaTarefa()
+    }
+})
+
+function adicionaTarefa() {
     const tarefa = document.createElement('li')
     const botao = document.createElement('button')
     // criando o elemento do txt
@@ -33,7 +45,7 @@ function adicionaTarefa () {
     txtAdcionar.value = ''
 }
 
-function apagar (botao){
+function apagar(botao) {
     const txt = document.querySelector(`.t${botao[1]}`)
     lista.removeChild(txt)
 }
