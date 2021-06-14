@@ -89,4 +89,10 @@ form button:active {
     min-height: 101vh;
     min-width: 100vw;
 }
-
+.blur {
+    height: 101vh;
+    background-color: rgba(0, 0, 0, 0.404);
+}
+.container{
+    z-index: 2;
+}
