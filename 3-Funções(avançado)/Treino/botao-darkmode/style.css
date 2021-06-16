@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+.button-mode {
+    margin-left: 90%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transform:translate();
+}
+
+.conteudo {
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.light {
+    border: 1px solid black;
+}
+.light h1, .light p{
+    color: black;
+}
+
+.dark {
+    border: 3px solid rgb(107, 107, 107);
+    background-color: black;
+}
+
+.dark h1, .dark p{
+    color: white;
+}
+
+
+.btn-mode {
+    max-width: 100px;
+    max-height: 100px;
+}
