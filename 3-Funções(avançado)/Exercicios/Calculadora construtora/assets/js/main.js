@@ -1,0 +1,72 @@
+function Calculadora() {
+
+    const display = document.querySelector('.display');
+
+    this.inicia = () => {
+        cliqueBotoes(); // tem que usar o this para acessar o metodo interno
+        pressEnter();
+    };
+
+    let cliqueBotoes = () => {
+        document.addEventListener('click',(e) => { // da pra usar arrow function e não precisar do bind
+            const el = e.target
+
+            if (el.classList.contains('btn-num')) {
+                btnParaDisplay(el.innerText);
+            }
+
+            if (el.classList.contains('btn-clear')) {
+                clearDisplay();
+            }
+
+            if (el.classList.contains('btn-del')) {
+                deleteOne();
+            }
+
+            if (el.classList.contains('btn-eq')) {
+                calc();
+            }
+        }); // bind(this) fala pra função usar o this do pai
+    };
+
+    const btnParaDisplay = (valor) => {
+        display.value += valor;
+    };
+
+    const clearDisplay = () => {
+        display.value = ''
+    };
+
+    const deleteOne = () => {
+        display.value = display.value.slice(0, -1)
+    };
+    const pressEnter = () => {
+        display.addEventListener('keyup', (e) => {
+            if (e.keyCode === 13) {
+                calc()
+            }
+        })
+    };
+
+    let calc = () => {
+        let conta = display.value;
+
+        try {
+            conta = eval(conta)
+
+            if (!conta) {
+                alert('Conta inválida');
+                return;
+            }
+
+            display.value = String(conta);
+        } catch (e) {
+            alert('Conta inválida');
+            return;
+        }
+    }
+};
+
+
+const calculadora = new Calculadora();
+calculadora.inicia()

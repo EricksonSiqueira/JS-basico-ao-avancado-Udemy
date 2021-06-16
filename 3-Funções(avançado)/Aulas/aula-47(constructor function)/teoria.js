@@ -13,6 +13,7 @@ function Pessoa (nome, sobrenome) {
     //this. deixa o metodo ou atribúto público
     this.nome = nome;
     this.sobrenome = sobrenome;
+    this.idade = 23;
 
     this.metodo = () => {
         console.log(this.nome + ': sou um método')
@@ -21,5 +22,4 @@ function Pessoa (nome, sobrenome) {
 // new -> cria um objeto vazio e faz o this apontar pro objeto vazio e retorna a variável
 const p1 = new Pessoa('Erickson', 'Siqueira')
 const p2 = new Pessoa('Anna', 'Paula')
-console.log (p1.sobrenome)
-p1.metodoInterno()
+console.log (p1.idade)
