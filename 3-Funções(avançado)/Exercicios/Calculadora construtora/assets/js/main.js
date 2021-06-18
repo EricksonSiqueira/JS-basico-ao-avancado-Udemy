@@ -11,22 +11,14 @@ function Calculadora() {
         document.addEventListener('click',(e) => { // da pra usar arrow function e não precisar do bind
             const el = e.target
 
-            if (el.classList.contains('btn-num')) {
-                btnParaDisplay(el.innerText);
-            }
+            if (el.classList.contains('btn-num')) btnParaDisplay(el.innerText);
 
-            if (el.classList.contains('btn-clear')) {
-                clearDisplay();
-            }
+            if (el.classList.contains('btn-clear')) clearDisplay()
 
-            if (el.classList.contains('btn-del')) {
-                deleteOne();
-            }
+            if (el.classList.contains('btn-del')) deleteOne();
 
-            if (el.classList.contains('btn-eq')) {
-                calc();
-            }
-        }); // bind(this) fala pra função usar o this do pai
+            if (el.classList.contains('btn-eq')) calc();
+        });
     };
 
     const btnParaDisplay = (valor) => {
@@ -34,22 +26,14 @@ function Calculadora() {
         display.focus();
     };
 
-    const clearDisplay = () => {
-        display.value = ''
-    };
+    const clearDisplay = () => display.value = ''
 
-    const deleteOne = () => {
-        display.value = display.value.slice(0, -1)
-        return
-    };
+    const deleteOne = () => display.value = display.value.slice(0, -1)
+
     const pressEnter = () => {
         display.addEventListener('keypress', (e) => {
-            if (e.keyCode === 13) {
-                calc();
-            }
-            if (e.keyCode === 8) {
-                deleteOne()
-            }
+            if (e.keyCode === 13) calc()
+            if (e.keyCode === 8) deleteOne()
         })
     };
 
