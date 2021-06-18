@@ -31,9 +31,8 @@ function Calculadora() {
     const deleteOne = () => display.value = display.value.slice(0, -1)
 
     const pressEnter = () => {
-        display.addEventListener('keypress', (e) => {
+        document.addEventListener('keypress', (e) => {
             if (e.keyCode === 13) calc()
-            if (e.keyCode === 8) deleteOne()
         })
     };
 
