@@ -1,9 +1,5 @@
 function contaPalavras(string){
     let frase = string.split(' ')
-    let palavras = ''
-    for(palavra of frase){
-        palavras += palavra
-    }
-    return palavras.length
+    return frase.length
 }
-console.log(contaPalavras('Erickson    '))
+console.log(contaPalavras('Erickson Siqueira'))
