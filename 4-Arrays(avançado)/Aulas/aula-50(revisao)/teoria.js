@@ -19,7 +19,7 @@ console.log(novo2)
 
 console.log(novo2.slice(1, 3)) // fatiando do 1 até o 2
 
-console.log(novo2.slice(0, -2))// tira os 2 últimos
+console.log(novo2.slice(0, -2))// tira os 2 primeiros
 
 const nome = 'Erickson Siqueira da Silva'
 const nomes2 = nome.split(' ') // separa a string por espaço
