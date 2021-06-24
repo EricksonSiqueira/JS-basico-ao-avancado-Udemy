@@ -13,6 +13,14 @@ function bubbleUm(items){
     }
     return items
 }
+function bubbleDois(items){
+    for(let last = items.length; last > 0; last--){
+        for(let j = 0; j < last; j++){
+            if(items[j] > items[j+1]) [items[j], items[j+1]] = [items[j+1], items[j]]
+        }
+    }
+    return items
+}
 /** 
 for(let i = 0; i < 5; i++){
     if(i === 0 || lista[i] > ordenada[lista.length - 1]) ordenada.push(lista[i])
@@ -27,5 +35,6 @@ for(let i = 0; i < 5; i++){
         }
     }
 }*/
-console.log(lista)
-console.log(bubbleUm(lista))
+console.log('Lista inicial:', lista)
+console.log('Bubble não otimizado:', bubbleUm(lista))
+console.log('Bubble otimizado:', bubbleDois(lista))
