@@ -60,6 +60,9 @@ body {
 .btn:hover{
     background-color: #5e62aa;
 }
+.btn:active{
+    transform: translateY(2px); /*Efeito de click */
+}
 
 .btn-clear {
     background-color: #EE8434;
