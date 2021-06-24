@@ -21,6 +21,22 @@ function bubbleDois(items){
     }
     return items
 }
+
+function bubbleTres(items) {
+    let swap;
+    let last = items.length - 1
+    do {
+        swap = false
+        for(let i = 0; i < last; i++){
+            if(items[i] > items[i+1]){
+                [items[i], items[i+1]] = [items[i+1], items[i]]
+                swap = true
+            }
+        }
+        last --;
+    } while(swap)
+    return items
+}
 /** 
 for(let i = 0; i < 5; i++){
     if(i === 0 || lista[i] > ordenada[lista.length - 1]) ordenada.push(lista[i])
@@ -38,3 +54,4 @@ for(let i = 0; i < 5; i++){
 console.log('Lista inicial:', lista)
 console.log('Bubble não otimizado:', bubbleUm(lista))
 console.log('Bubble otimizado:', bubbleDois(lista))
+console.log('Bubble Ultra otimizado:', bubbleTres(lista))
