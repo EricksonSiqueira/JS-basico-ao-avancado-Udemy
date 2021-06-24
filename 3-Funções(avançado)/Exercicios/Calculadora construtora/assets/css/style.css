@@ -18,7 +18,7 @@ body {
     font-size: 1.3em;
     line-height: 1.5em;
 }
-
+/*container com tudo dentro*/
 .container {
     text-align: center;
     max-width: 300px;
@@ -28,9 +28,12 @@ body {
     border-radius: 20px;
 }
 
+/*tabela que estão os botões*/
 .calculadora {
     width: 260px;
 }
+
+/*Display da calculadora*/
 
 .display {
     font-size: 2em;
@@ -39,6 +42,8 @@ body {
     margin-bottom: 10px;
     border-radius: 5px;
 }
+
+/*Botões */
 
 .btn {
     width: 55px;
@@ -50,7 +55,7 @@ body {
     border-radius: 50%;
     margin-bottom: 3px;
     color: #fff;
-    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.30);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.30); /*sombra dos botões*/
 }
 .btn:hover{
     background-color: #5e62aa;
