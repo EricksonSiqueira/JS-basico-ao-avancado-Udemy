@@ -40,7 +40,7 @@ function Calculadora() {
         let conta = display.value;
 
         try {
-            conta = eval(conta)
+            conta = (eval(conta)).toFixed(2)
 
             if (!conta) {
                 alert('Conta inválida');
