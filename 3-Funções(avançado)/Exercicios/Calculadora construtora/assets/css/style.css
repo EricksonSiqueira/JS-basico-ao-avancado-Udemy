@@ -53,20 +53,27 @@ body {
     box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.30);
 }
 .btn:hover{
-    background-color: #43414b;
+    background-color: #5e62aa;
 }
 
 .btn-clear {
-    color: #fff;
     background-color: #EE8434;
 }
 .btn-clear:hover {
-    background-color: #7fb696;
+    background-color: #d67225
 }
+
 .btn-op {
     background-color: #43414b;
 }
 
+.btn-op:hover {
+    background-color: #3e3c47;
+}
+
 .btn-del {
     background-color: #C5076C;
+}
+.btn-del:hover {
+    background-color: #ad065f;
 }
