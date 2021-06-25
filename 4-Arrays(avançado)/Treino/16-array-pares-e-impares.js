@@ -18,4 +18,6 @@ let teste = []
 for(let i = 0; i <= 6; i++){
     teste.push(Math.round(Math.random()*10))
 }
-console.log(`Vetor inicial: ${teste}\nVetor de pares: ${par(teste)}\nVetor impares: ${impar(teste)}`)
+let pares = par(teste)
+let impares = impar(teste)
+console.log(`Vetor inicial: ${teste}\nVetor de pares: ${pares.sort((a, b) => b-a)}\nVetor impares: ${impares.sort()}`)
