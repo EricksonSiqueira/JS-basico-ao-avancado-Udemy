@@ -12,5 +12,5 @@ const pessoas = [
     
 ];
 
-const cincoMais = pessoas.filter((valor, indice, vetor) => valor.nome.length >= 5)
-console.log(cincoMais)
+const cincoMais = pessoas.filter((valor) => valor.nome.length >= 5)
+const maisDeCinquanteAnos = pessoas.filter((valor) => valor.idade > 50)
