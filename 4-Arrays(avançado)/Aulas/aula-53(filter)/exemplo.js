@@ -15,4 +15,5 @@ const pessoas = [
 const cincoMais = pessoas.filter(valor => valor.nome.length >= 5)
 const maisDeCinquanteAnos = pessoas.filter(valor => valor.idade > 50)
 const nomeTerminaComA = pessoas.filter(valor => valor.nome[valor.nome.length - 1] === 'a')
-console.log(nomeTerminaComA)
+const terminaComA = pessoas.filter(obj => obj.nome.toLowerCase().endsWith('a'))
+console.log(terminaComA)
