@@ -11,3 +11,4 @@ const pessoas = [
 
 const pessoasMaioresDe18 = pessoas.filter(obj => obj.idade >= 18)
 const pessoasMenoresDe18 = pessoas.filter(obj => !(obj.idade >= 18))
+const sobrenomeSilva = pessoas.filter(obj => obj.sobrenome.toLowerCase().indexOf('silva') > -1)
