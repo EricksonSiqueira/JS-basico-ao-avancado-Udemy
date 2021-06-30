@@ -16,5 +16,5 @@ const pessoas = [
     { nome: 'Wallace', idade: 47},
 ];
 const nomes = pessoas.map(obj => obj.nome)
-console.log(nomes)
-
+const removeNome = pessoas.map(obj => delete obj.nome)
+console.log(pessoas)
