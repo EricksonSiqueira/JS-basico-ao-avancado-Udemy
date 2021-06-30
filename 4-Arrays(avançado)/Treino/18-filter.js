@@ -15,4 +15,5 @@ const sobrenomeSilva = pessoas.filter(obj => obj.sobrenome.toLowerCase().indexOf
 const sobrenomePontes = pessoas.filter(obj => obj.sobrenome.toLowerCase().indexOf('pontes') > -1)
 const sobrenomeSilvaMenoresDe18 = pessoas.filter(obj => obj.sobrenome.toLowerCase().indexOf('silva') > -1 && obj.idade < 18)
 const nomeComecaComA = pessoas.filter(obj => obj.nome.toLocaleLowerCase()[0] === 'a')
-console.log(nomeComecaComA)
+const nomesTerminamComO = pessoas.filter(obj => obj.nome.toLowerCase()[obj.nome.length - 1] === 'o')
+console.log(nomesTerminamComO)
