@@ -18,4 +18,5 @@ const pessoas = [
 const nomes = pessoas.map(obj => obj.nome)
 const removeNome = pessoas.map(obj => delete obj.nome)
 const addId = pessoas.map((obj, indice) => obj.id = `${indice}`)
+const addSobrenome = pessoas.map(obj => obj.sobrenome = 'Silva')
 console.log(pessoas)
