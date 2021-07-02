@@ -36,14 +36,14 @@ const somaPar = numeros.reduce(function(acumulador, valor, indice, array)  {
 const pessoas = [
     {nome: 'Luiz', idade: 62},
     {nome: 'Maria', idade: 23},
-    {nome: 'Eduardo', idade: 55},
+    {nome: 'Eduardo', idade: 105},
     {nome: 'Letícia', idade: 10},
     {nome: 'Rosana', idade: 64},
     {nome: 'Wallace', idade: 63},
 ];
 
 const pessoaMaisVelha = pessoas.reduce(function(acumulador, obj) {
-    if(acumulador === 0 || acumulador.idade < obj.idade) acumulador = obj
+    if(acumulador.idade < obj.idade) acumulador = obj
     return acumulador
-}, 0)
+})
 console.log(pessoaMaisVelha)
