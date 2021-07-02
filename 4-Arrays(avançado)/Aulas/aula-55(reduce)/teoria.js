@@ -30,4 +30,20 @@ const somaPar = numeros.reduce(function(acumulador, valor, indice, array)  {
     }
     return acumulador
 }, 0)
-console.log(somaPar)
+
+
+//Retorne a pessoa mais velha
+const pessoas = [
+    {nome: 'Luiz', idade: 62},
+    {nome: 'Maria', idade: 23},
+    {nome: 'Eduardo', idade: 55},
+    {nome: 'Letícia', idade: 10},
+    {nome: 'Rosana', idade: 64},
+    {nome: 'Wallace', idade: 63},
+];
+
+const pessoaMaisVelha = pessoas.reduce(function(acumulador, obj) {
+    if(acumulador === 0 || acumulador.idade < obj.idade) acumulador = obj
+    return acumulador
+}, 0)
+console.log(pessoaMaisVelha)
