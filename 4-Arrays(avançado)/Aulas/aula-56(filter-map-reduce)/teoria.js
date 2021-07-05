@@ -6,4 +6,4 @@
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 11, 15, 22, 27];
 const numerosPares = numeros.filter(valor => valor % 2 === 0)
 const dobrarValores = numeros.map(valor => valor*2)
-console.log(dobrarValores)
+const reduzido = numeros.reduce((somatorio, valor) => somatorio += valor)
