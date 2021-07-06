@@ -8,5 +8,12 @@ function achaNumero (vetor, n){
     }
     return indice
 }
-
-console.log(achaNumero([2, 3, 4, 2, 5, 2, 9, 0 ,2], 2))
+function achaNumeroFilter(vetor, n){
+    const vet = []
+    vetor.filter(function(valor, indice){
+        if(valor === n) vet.push(indice)
+    })
+    return vet
+}
+const vetor = [2, 3, 4, 2, 5, 2, 9, 3 ,2]
+console.log(achaNumeroFilter(vetor, 3))
