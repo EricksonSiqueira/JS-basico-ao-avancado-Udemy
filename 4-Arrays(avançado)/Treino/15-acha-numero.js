@@ -16,5 +16,5 @@ function achaNumeroFilter(vetor, n){
     return vet
 }
 const vetor = [2, 3, 4, 2, 5, 2, 9, 3 ,2]
-console.log(achaNumeroFilter(vetor, 3))
-console.log(achaNumero(vetor, 2))
+console.log(achaNumeroFilter(vetor, 5))
+console.log(achaNumero(vetor, 5))
